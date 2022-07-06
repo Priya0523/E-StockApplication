@@ -1,0 +1,37 @@
+.container-register{
+    height: 730px;
+    .sidenav {
+        height: 100%;
+        background:linear-gradient(90deg,skyblue,#e61eb6);;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+    }
+    @media screen and (min-width: 768px){
+        
+    }
+    .register-form-heading{
+        text-align: center;
+        font-weight: bolder;
+    }
+}
+.text-form{
+    font-family: "OpenSans-Bold";
+    margin-bottom: 2px;
+    font-size: 20px;
+}
+.register-button{
+    font-family: "OpenSans-Bold";
+    font-size: 20px;
+}
+.btn{
+    box-shadow: 0 10px 30px 0 rgba(21,10,82,.35);
+    background: linear-gradient(270deg,#2e19a7,#ae0ee9);
+    border-radius: 25px;
+    padding: 10px 34px;
+    background-size: 100% auto;
+    color: white;
+    font-weight: bolder;
+}

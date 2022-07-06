@@ -1,0 +1,22 @@
+<div class="stock-details-container">
+    <h2 class="text-center">STOCK DETAILS TABLE</h2>
+    <hr>
+    <table aria-describedby="stockDetails" class="table table-accordion table-bordered col-equal border-0">
+        <thead>
+            <tr>
+                <th scope="col" *ngFor="let col of headers">
+                    <div [attr.data-name]="col.key">
+                        {{col?.name | json}}
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

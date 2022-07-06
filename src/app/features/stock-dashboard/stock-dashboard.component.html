@@ -1,0 +1,60 @@
+<div class="dashboard-container">
+    <div class="row m-0">
+        <form [formGroup]="dashBoardForm">
+            <div class="col-sm-12 header-space"></div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="#" class="col-sm-6 m-0 img-stock"><span class="navbar-logo"></span>
+                            <img src="../../../assets/stcks.png" />
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="mr-2">List of Companies</label>
+                        <select formControlName="companies">
+                            <option>Select Company</option>
+                            <option *ngFor="let company of companyLists" [ngValue]="company.code"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" formControlName="searchFilterTxt" class="form-control mt-2"
+                            placeholder="Search" autocomplete="off">
+                        <span class="py-2"><img [src]="IMAGE_CONST.SEARCH" alt="Search" aria-labelledby="Search"
+                                (click)="searchBasedOnCompanyCode()" /></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-12 header-midCard"></div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group mt-2">
+                            <label class="text-form">Start Date:</label>
+                            <input type="text" formControlName="startDate" class="form-control" placeholder="Start Date"
+                                maxlength="10">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group mt-2">
+                            <label class="text-form">End Date:</label>
+                            <input type="text" formControlName="endDate" class="form-control" placeholder="End Date"
+                                maxlength="10">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary btn-lg" tabindex="0"
+                                (click)="getStockDetailsBasedOnDates()">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 header-midCard"></div>
+            <div class="col-sm-12">
+                <app-stock-details [stockTableDetails]="stockTableDetails"></app-stock-details>
+            </div>
+            <div class="col-sm-12 footer-space"></div>
+        </form>
+    </div>
+</div>

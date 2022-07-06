@@ -1,0 +1,42 @@
+<div class="row container-register">
+    <div class="col-sm-4 sidenav">
+    </div>
+    <div class="col-sm-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <form [formGroup]="registerCompany">
+                    <h2 class="register-form-heading">Register Company</h2>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group mt-2">
+                                <label class="text-form">Company Code:</label>
+                                <input type="text" formControlName="companyCode" class="form-control" placeholder="Company Code">
+                            </div>
+                            <div class="form-group mt-2">
+                                <label class="text-form">Company Name:</label>
+                                <input type="text" formControlName="companyName" class="form-control" placeholder="Company Name">
+                            </div>
+                            <div class="form-group mt-2">
+                                <label class="text-form">Company CEO:</label>
+                                <input type="text" formControlName="companyCEO" class="form-control" placeholder="Company CEO">
+                            </div>
+                            <div class="form-group mt-2">
+                                <label class="text-form">Company Turnover:</label>
+                                <input type="text" formControlName="companyTurnover" class="form-control" placeholder="Company Turnover">
+                            </div>
+                            <div class="form-group mt-2">
+                                <label class="text-form">Company Website:</label>
+                                <input type="text" formControlName="companyWebsite" class="form-control" placeholder="Company Website">
+                            </div>
+                            <div class="register-button mt-3">
+                            <button type="submit" class="btn btn-black loginbtn" (click)="registerCompanies()">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 sidenav">
+    </div>
+  </div>
